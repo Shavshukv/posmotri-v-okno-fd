@@ -36,7 +36,7 @@ html {
   justify-content: end;
   width: 100%;
   height: 534px;
-  gap: 26px;
+  gap: 20px;
 }
 
 /* контейнер карточки городов со скроллом */
@@ -49,15 +49,34 @@ html {
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
+  width: 390px;
+  height: 298px;
+}
+
+.title, .content__video-card-title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title {
+  max-width: 259px;
+  min-height: 215px;
+  font-size: 75px;
+  line-height: 70.5px;
+}
+
+.content__accent {
+  color: #545050;
 }
 
 .result {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  min-height: 456px;
-
+  justify-content: center;
+  gap: 20px;
+  max-height: 456px;
 }
 
 /* контейнер видео и формы */
@@ -69,7 +88,7 @@ html {
 /* размеры видео */
 .result__video {
   min-width: 711px;
-  min-height: 386px;
+  max-height: 386px;
   object-fit: cover;
 }
 
@@ -80,6 +99,12 @@ html {
   justify-content: space-between;
 }
 
+.search-form__fieldset-title, .content__video-card-description {
+  font-family: 'Fira Sans Condensed';
+  font-size: 18px;
+  font-weight: 400;
+}
+
 /* контент внутри скоролла */
 .content__video-card {
   display: flex;
@@ -88,19 +113,110 @@ html {
   justify-content: space-between;
 }
 
+/* Заголовок и описание города */
+.content__card-link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+/* заголовок города */
+.content__video-card-title {
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  max-width: 196px;
+  font-size: 30px;
+}
+
 /* размеры картинок внутри скоролла */
 .content__video-card-thumbnail {
-  width: 193px;
-  height: 103px;
+  max-width: 193px;
+  max-height: 103px;
   object-fit: cover;
   object-position: center;
 }
 
-/* не доделал */
-.content__video-card-description-container {
-  flex-grow: 1
+.search-form__checkbox-list {
+  display: flex;
+  flex-direction: row;
 }
 
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.search-form__label {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+/*поле ввода города*/
+.search-form__textfield {
+  width: 225px;
+  height: 27px;
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-top: 5px;
+}
+
+.search-form__textfield::placeholder {
+  color: #FFFFFFB2;
+}
+
+.search-form__label:has(:not(:active):focus-visible) {
+  outline: 1px #FFFFFF solid ;
+  outline-offset: 2px;
+}
+/*чекбокс*/
+.search-form__checkbox-list {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding-top: 5px;
+}
+
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #FFFFFF;
+  position: relative;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
+  background-color: #FFFFFF;
+  box-shadow: inset 0 0 0 1px #000;
+}
+
+.search-form__label {
+  text-decoration: none;
+}
+
+.search-form__label:hover  {
+  text-decoration: underline 1px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 
 
 h1,

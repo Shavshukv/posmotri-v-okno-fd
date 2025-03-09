@@ -54,7 +54,8 @@ ol {
   display: grid;
   grid-template-columns: 711px 399px;
   align-items: end;
-  gap: 30px;
+  gap: 28px;
+  min-height: 534px;
   inline-size: 1140px;
 }
 
@@ -66,7 +67,7 @@ ol {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 20px;
+  gap: 21px;
   width: 100%;
   margin-bottom: 0;
 }
@@ -104,7 +105,7 @@ ol {
 
 /* заголовок города */
 .content__video-card-title {
-  max-width: 196px;
+  max-width: 190px;
   overflow: hidden;
   font-size: 30px;
   text-overflow: ellipsis;
@@ -140,7 +141,8 @@ ol {
 }
 
 .title {
-  max-width: 259px;
+  min-width: 260px;
+  min-height: 210px;
   font-size: 75px;
   line-height: 70.5px;
 }
@@ -210,12 +212,6 @@ ol {
   outline-offset: 1px;
 }
 
-.search-form__checkbox-list {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-}
-
 .search-form__fieldset {
   display: block;
   margin-top: 10px;
@@ -224,9 +220,7 @@ ol {
 
 .search-form__label {
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  width: fit-content;
+  align-items: center;
 }
 
 /*поле ввода города*/
@@ -271,7 +265,6 @@ ol {
 /*чекбокс*/
 .search-form__checkbox-list {
   display: flex;
-  flex-direction: row;
   gap: 15px;
 }
 
@@ -281,7 +274,6 @@ ol {
   height: 19px;
   margin-right: 5px;
   border: 1px solid #ffffff;
-  cursor: pointer;
 }
 
 input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
@@ -289,12 +281,9 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
   background-color: #ffffff;
 }
 
-.search-form__label {
-  text-decoration: none;
-}
-
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline 1px;
+  cursor: pointer;
 }
 
 .button {
